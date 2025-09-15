@@ -10,12 +10,9 @@ import org.springframework.context.annotation.Configuration;
 public class OpenSearchConfiguration {
 
     @Bean
-    public RestHighLevelClient client() {
-        return new RestHighLevelClient(
-                RestClient.builder(
-                        new HttpHost("localhost", 9200, "http")
-                )
-        );
+    public RestHighLevelClient openSearchClient() {
+        HttpHost host = new HttpHost("localhost", 9200, "http");
+        return new RestHighLevelClient(RestClient.builder(host));
     }
 }
 
