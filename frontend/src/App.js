@@ -1,11 +1,17 @@
-import './App.css';
+import SearchBar from "./searchPage"; 
 
 function App() {
-  return (
-    <div className="App">
+   const searchDocuments = (query) => {
+      console.log("Searching: ", query)
       
-    </div>
-  );
+   }
+   return (
+     <div>
+        <SearchBar onSearch={searchDocuments} />
+     </div>
+   )
 }
 
 export default App;
+
+
