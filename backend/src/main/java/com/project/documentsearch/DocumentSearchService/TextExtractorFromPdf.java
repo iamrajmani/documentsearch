@@ -5,7 +5,7 @@ import com.project.documentsearch.repository.DocumentRepository;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
 import org.springframework.stereotype.Service;
-import jakarta.annotation.PostConstruct; // make sure to import this
+import jakarta.annotation.PostConstruct;
 
 import java.io.File;
 import java.io.IOException;
