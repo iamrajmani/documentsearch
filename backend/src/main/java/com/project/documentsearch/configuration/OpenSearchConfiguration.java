@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class OpenSearchConfiguration {
 
-    @Bean
+    @Bean(destroyMethod = "close")
     public RestHighLevelClient openSearchClient() {
         HttpHost host = new HttpHost("localhost", 9200, "http");
         return new RestHighLevelClient(RestClient.builder(host));
